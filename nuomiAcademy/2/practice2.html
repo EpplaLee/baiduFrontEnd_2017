@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <style>
+        #menu {
+            width: 80px;
+            padding: 0;
+            margin: 0;
+
+        }
+        #menu li {
+            border: solid black 2px;
+             
+            list-style: none;
+        }
+        #menu li:hover {
+            background: #93AFC4;
+            color: #FFFFFF;
+        }
+        </style>
+    </head>
+    <body>
+<h3>On This Page Your Right Click Will Trigger a Special Menu</h3>
+<ul id="menu" style="display: none">
+    <li>叠个甲</li>
+    <li>转个刀</li>
+    <li>声控图腾</li>
+</ul>
+    </body>
+    <script>
+       window.oncontextmenu = function(event){
+           var menu = document.getElementById('menu');
+           menu.style.cssText = 'display:block; position:absolute;' + 'top:' + event.clientY + 'px;left:' + event.clientX + 'px;';
+
+
+           menu.onmouseleave = function(){
+               setTimeout(function() {
+                   menu.style.display = "none";
+               },400);
+           };
+
+           
+           console.log("now you can't call the menu");
+           return false;
+       };
+
+    </script>
+</html>

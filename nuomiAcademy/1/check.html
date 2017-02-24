@@ -1,0 +1,25 @@
+<style>
+label.checkbox1:before{
+    content: '';
+    width:16px;
+    height:16px;
+    display: inline-block;
+    background-position: -24px -10px;
+    background-image: url(http://p1.bqimg.com/567571/99322cf8c3283e42.png);
+}
+#cat:checked ~  label.checkbox1:before {
+    display: none;
+}
+label {
+    display: inline;
+}
+
+</style>
+
+<p>A Way to catch a heart</p>
+<label class="checkbox1">变成猫<input id="cat" type ="checkbox" value="cat" style=""></label>
+<br>
+<label class="checkbox1" id="tiger">变成虎<input type ="checkbox" value="tiger" style="display: none"></label>
+<br>
+<label class="checkbox1" id="dog">变成被雨淋湿的狗<input type ="checkbox" value="A dog caught in a rain" style="display: none"></label>
+
