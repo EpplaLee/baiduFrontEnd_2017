@@ -20,7 +20,7 @@
     </head>
     <body>
 <h3>On This Page Your Right Click Will Trigger a Special Menu</h3>
-<ul id="menu" style="display: block">
+<ul id="menu" style="display: none">
     <li>全选</li>
     <li>复制</li>
     <li>粘贴</li>
@@ -32,7 +32,6 @@
            console.log(window.innerWidth,window.innerHeight);
            var menu = document.getElementById('menu');
            showMenu(menu,event);
-        //    menu.style.cssText = 'display:block; position:absolute;' + 'top:' + event.clientY + 'px;left:' + event.clientX + 'px;';
            menu.onmouseleave = function(){
                setTimeout(function() {
                    menu.style.display = "none";
