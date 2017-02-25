@@ -6,11 +6,10 @@
             width: 80px;
             padding: 0;
             margin: 0;
-
         }
         #menu li {
             border: solid black 2px;
-             
+            margin-top:-1px; 
             list-style: none;
         }
         #menu li:hover {
@@ -21,28 +20,93 @@
     </head>
     <body>
 <h3>On This Page Your Right Click Will Trigger a Special Menu</h3>
-<ul id="menu" style="display: none">
-    <li>叠个甲</li>
-    <li>转个刀</li>
-    <li>声控图腾</li>
+<ul id="menu" style="display: block">
+    <li>全选</li>
+    <li>复制</li>
+    <li>粘贴</li>
+    <li>返回顶部</li>
 </ul>
     </body>
     <script>
        window.oncontextmenu = function(event){
+           console.log(window.innerWidth,window.innerHeight);
            var menu = document.getElementById('menu');
-           menu.style.cssText = 'display:block; position:absolute;' + 'top:' + event.clientY + 'px;left:' + event.clientX + 'px;';
-
-
+           showMenu(menu,event);
+        //    menu.style.cssText = 'display:block; position:absolute;' + 'top:' + event.clientY + 'px;left:' + event.clientX + 'px;';
            menu.onmouseleave = function(){
                setTimeout(function() {
                    menu.style.display = "none";
                },400);
            };
+     menu.onclick = function(event) {
+         menu.style.display = "none";
+         alert("您选择了:" + event.target.innerHTML);
+        }    
 
-           
-           console.log("now you can't call the menu");
-           return false;
+        return false;
        };
+       function showMenu(menu, event) {    
+           var xWidth = window.innerWidth - event.clientX;
+           var yHeight = window.innerHeight - event.clientY;
+           console.log(xWidth,yHeight); 
+           var menuWidth = getHiddenWidth(menu);
+           var menuHeight = getHiddenHeight(menu);
+           console.log(menuWidth,menuHeight);
+           var solution;
+           if(xWidth > menuWidth && yHeight > menuHeight) solution = 0;
+           if(xWidth < menuWidth && yHeight > menuHeight) solution = 1;
+           if(xWidth > menuWidth && yHeight < menuHeight) solution = 2;
+           if(xWidth < menuWidth && yHeight < menuHeight) solution = 3;
+           console.log(solution);
+           switch(solution) {
+               case 0:
+                   menu.style.display = 'block';
+                   menu.style.position = 'absolute';
+                   menu.style.left = event.clientX + 'px';
+                   menu.style.top = event.clientY + 'px';
+                   break;
+                case 1:
+                   menu.style.display = 'block';
+                   menu.style.position = 'absolute';
+                   menu.style.left = event.clientX - menuWidth + 'px';
+                   menu.style.top = event.clientY + 'px';
+                   break;
+                case 2:
+                   menu.style.display = 'block';
+                   menu.style.position = 'absolute';
+                   menu.style.left = event.clientX + 'px';
+                   menu.style.top = event.clientY - menuHeight + 'px';
+                   break;
+                case 3:
+                   menu.style.display = 'block';
+                   menu.style.position = 'absolute';
+                   menu.style.left = event.clientX - menuWidth + 'px';
+                   menu.style.top = event.clientY - menuHeight + 'px';
+                   break;
+           }
+       }
+       function getHiddenWidth(menu){
+           var clone = menu.cloneNode(true);
+           clone.style.display = "block";
+           clone.style.position = "absolute";
+           clone.style.top = '-10000px';
+           menu.parentNode.appendChild(clone);
+
+           var width = clone.offsetWidth;
+           menu.parentNode.removeChild(clone);
+           return width;
+       }
+       function getHiddenHeight(menu){
+           var clone = menu.cloneNode(true);
+           clone.style.display = "block";
+           clone.style.position = "absolute";
+           clone.style.top = '-10000px';
+           menu.parentNode.appendChild(clone);
+
+           var height = clone.offsetHeight;
+           menu.parentNode.removeChild(clone);
+           return height;
+       }
 
     </script>
 </html>
