@@ -40,7 +40,7 @@
            console.log(window.innerWidth,window.innerHeight);
            var menu = document.getElementById('menu');
            showMenu(menu,event);
-// 调用showMenu函数显示菜单，该函数会根据鼠标在页面中的位置调整菜单出现的方向
+// 调用showMenu函数显示菜单，该函数会根据鼠标位置页面右下剩余大小调整菜单出现方向
            menu.onmouseleave = function(){
                setTimeout(function() {
                    menu.style.display = "none";
