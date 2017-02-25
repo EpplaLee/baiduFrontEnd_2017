@@ -2,6 +2,11 @@
 <html>
     <head>
         <style>
+        #menu-area {
+            width: 500px;
+            height: 500px;
+            border: solid dimgray 1px;
+        }
         #menu {
             width: 80px;
             padding: 0;
@@ -19,7 +24,9 @@
         </style>
     </head>
     <body>
-        <h3>On This Page Your Right Click Will Trigger a Special Menu</h3>
+        <h3>On This area Your Right Click Will Trigger a Special Menu</h3>
+        <div id="menu-area">
+        </div>
         <ul id="menu" style="display: none">
             <li>全选</li>
             <li>复制</li>
@@ -28,7 +35,8 @@
         </ul>
     </body>
     <script>
-       window.oncontextmenu = function(event){
+       
+       document.getElementById('menu-area').oncontextmenu = function(event){
            console.log(window.innerWidth,window.innerHeight);
            var menu = document.getElementById('menu');
            showMenu(menu,event);
