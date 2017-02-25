@@ -32,11 +32,13 @@
            console.log(window.innerWidth,window.innerHeight);
            var menu = document.getElementById('menu');
            showMenu(menu,event);
+// 调用showMenu函数显示菜单，该函数会根据鼠标在页面中的位置调整菜单出现的方向
            menu.onmouseleave = function(){
                setTimeout(function() {
                    menu.style.display = "none";
                },400);
            };
+// 移开鼠标后菜单会消失
      menu.onclick = function(event) {
          menu.style.display = "none";
          alert("您选择了:" + event.target.innerHTML);
@@ -50,6 +52,7 @@
            console.log(xWidth,yHeight); 
            var menuWidth = getHiddenWidth(menu);
            var menuHeight = getHiddenHeight(menu);
+// getHiddenWidth，getHiddenHeight函数能获得display:none元素的长和宽
            console.log(menuWidth,menuHeight);
            var solution;
            if(xWidth > menuWidth && yHeight > menuHeight) solution = 0;
