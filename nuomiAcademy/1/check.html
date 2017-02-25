@@ -1,25 +1,91 @@
-<style>
-label.checkbox1:before{
-    content: '';
-    width:16px;
-    height:16px;
-    display: inline-block;
-    background-position: -24px -10px;
-    background-image: url(http://p1.bqimg.com/567571/99322cf8c3283e42.png);
-}
-#cat:checked ~  label.checkbox1:before {
-    display: none;
-}
-label {
-    display: inline;
-}
-
-</style>
-
-<p>A Way to catch a heart</p>
-<label class="checkbox1">变成猫<input id="cat" type ="checkbox" value="cat" style=""></label>
-<br>
-<label class="checkbox1" id="tiger">变成虎<input type ="checkbox" value="tiger" style="display: none"></label>
-<br>
-<label class="checkbox1" id="dog">变成被雨淋湿的狗<input type ="checkbox" value="A dog caught in a rain" style="display: none"></label>
+<!DOCTYPE html>
+<html>
+      <head>
+            <style>
+                label.checkbox1 {
+                    content: '';
+                    width:16px;
+                    height:16px;
+                    display: inline-block;
+                    background-position: -24px -10px;
+                    background-image: url(http://p1.bqimg.com/567571/99322cf8c3283e42.png);
+                }
+                label.checkbox2 {
+                    content: '';
+                    width:16px;
+                    height:16px;
+                    display: inline-block;
+                    background-position: -25px -33px;
+                    background-image: url(http://p1.bqimg.com/567571/99322cf8c3283e42.png);
+                }
+                #label1-1::after {
+                    display: inline-block;
+                    margin-left: 20px;
+                    width: 200px;
+                    content: '变成猫';
+                }
+                #label1-2::after {
+                    display: inline-block;
+                    margin-left: 20px;
+                    width: 200px;
+                    content: '变成虎';
+                }
+                #label1-3::after {
+                    display: inline-block;
+                    margin-left: 20px;
+                    width: 200px;
+                    content: '变成被雨淋湿的小狗';
+                }
+                #label2-1::after {
+                    display: inline-block;
+                    margin-left: 20px;
+                    width: 200px;
+                    content: 'To live as a monster';
+                }
+                #label2-2::after {
+                    display: inline-block;
+                    margin-left: 20px;
+                    width: 200px;
+                    content: 'To die as a good man';
+                }
+                
+                #cat:checked ~ #label1-1 {
+                    background-position: -59px -10px;
+                }
+                #tiger:checked ~ #label1-2 {
+                    background-position: -59px -10px;
+                }
+                #dog:checked ~ #label1-3 {
+                    background-position: -59px -10px;
+                }
+                #monster:checked ~ #label2-1 {
+                    background-position: -60px -32px;
+                }
+                #goodman:checked ~ #label2-2 {
+                    background-position: -60px -32px;
+                }
+            </style>
+    </head>
+    <body>
+        <p>A Way to catch a heart</p>
+        <input id="cat" type ="checkbox" value="cat" style="display: none" id="cat"/>
+        <label class="checkbox1" id="label1-1" for="cat"></label>
+        <br>
+        <input type ="checkbox" value="tiger" style="display: none" id="tiger"/>
+        <label class="checkbox1" id="label1-2" for="tiger"></label>
+        <br>
+        <input type ="checkbox" value="A dog caught in a rain" style="display: none" id="dog"/>
+        <label class="checkbox1" id="label1-3" for="dog"></label>
+        <br>
+        <br>
+        <input type ="checkbox" value="monster" style="display: none" id="monster"/>
+        <label class="checkbox2" id="label2-1" for="monster"></label>
+        <br>
+        <input type ="checkbox" value="goodman" style="display: none" id="goodman"/>
+        <label class="checkbox2" id="label2-2" for="goodman"></label>
+        <pre>
+                    ————《禁闭岛》
+        </pre>
+    </body>
+</html>
 
