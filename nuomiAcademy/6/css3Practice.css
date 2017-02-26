@@ -1,0 +1,21 @@
+body {
+    align-items: center;
+}
+
+.container {
+    position:relative;
+    display: flex;
+    width: 60%;
+    height: auto;
+}
+.conversation {
+    display: block;
+}
+.inside {
+    position: absolute;
+    display: flex;
+    text-align: center;
+}
+img {
+    max-width: 800px;
+}
