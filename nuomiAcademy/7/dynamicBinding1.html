@@ -1,0 +1,36 @@
+<!--使用ES5中的getter和setter实现-->
+<script>function Observer(obj) {
+    this.name = obj.name;
+    this.age = obj.age;  
+}
+Object.defineProperties(Observer.prototype, {
+    name: {
+        get: function(){
+            console.log("你访问了name"); 
+        },
+
+        set: function(name){
+            console.log("你设置了name,新的值为" + name);
+        }
+    },
+    age: {
+        get: function(){
+            console.log("你访问了age"); 
+        },
+
+        set: function(age){
+            console.log("你设置了age,新的值为" + age);
+        }
+    }   
+});
+
+var list1 = new Observer({
+    name: "MagicConch",
+    age: 22
+});
+
+
+
+list1.name;
+list1.age = 23;
+</script>
