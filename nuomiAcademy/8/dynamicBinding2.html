@@ -1,0 +1,48 @@
+<script>
+function Observer (data) {
+  //暂不考虑数组
+  this.data = data;
+  this.makeObserver(data);
+}
+Observer.prototype.setterAndGetter = function (key, val) {
+  //此为问题一的要点
+  Object.defineProperty(this.data, key, {
+    enumerable: true,
+    configurable: true,
+    get: function(){
+      console.log('你访问了' + key);
+      return val;
+    },
+    set: function(newVal){
+      console.log('你设置了' + key);
+      console.log('新的' + key + '=' + newVal);
+      val = newVal;
+    }
+  })
+}
+Observer.prototype.makeObserver = function (obj) {
+  let val;
+  //此为问题二的要点
+  for(let key in obj){
+    if(obj.hasOwnProperty(key)){
+      val = obj[key];
+      //深度遍历
+      if(typeof val === 'object'){
+        new Observer(val);
+      }
+    }
+    this.setterAndGetter(key, val);
+  }
+}
+
+//测试
+let app = new Observer({
+basicInfo: {
+    name: 'liujianhuan',
+    age: 25
+},
+company: 'Qihoo 360',
+address: 'Chaoyang, Beijing'
+});
+app.basicInfo.name = "LostBoy";
+</script>

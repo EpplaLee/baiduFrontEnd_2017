@@ -1,5 +1,5 @@
 <!--使用ES5中的getter和setter实现-->
-<script>
+<!--<script>
 function Observer1(obj) {
     this.name = obj.name;
     this.age = obj.age;  
@@ -33,5 +33,29 @@ var list1 = new Observer1({
 list1.name;
 list1.age = 23;
 console.log(list1);
+</script>-->
+上述特性已从Web标准中删除，故改用ES6中的Proxy方法来实现.
+<script>
+function Observer(data) {
+    return new Proxy(data, {
+        get: function(target, key) {
+            if(key in target) {
+                console.log('你访问了' + key);
+                return target[key];
+            }else{
+                throw new Error('key does not exist');
+            }
+        },
+        set: function(target, key, newVal) {
+            console.log('你设置' + key + '的值为' + newVal);
+            target[key] = newVal;
+        }
+    });
+}
+
+let app = new Observer({
+    name: 'LonelyBicth',
+    age: 22
+});
 </script>
 
