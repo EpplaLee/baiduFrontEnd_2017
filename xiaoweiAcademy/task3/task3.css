@@ -8,7 +8,7 @@ body {
     font-size: 15px;
 }
 
-.container {
+.container1 {
     background-color: #eee;
     border: #999 1px solid;
     overflow: hidden;
@@ -17,7 +17,7 @@ body {
 }
 
 
-.left {
+.left1 {
     float: left;
     width: 200px;
     background: #FFF;
@@ -27,13 +27,13 @@ body {
 }
 
 
-.center {
+.center1 {
     margin-left: 240px;
     margin-right: 160px;
     background: #FFF;
     border: #999 1px solid;
 }
-.right {
+.right1 {
     float: right;
     width: 120px;
     background: #FFF;
@@ -47,3 +47,39 @@ img {
     height: 80px;
     width: 80px;
 }
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #eee;
+    border: #999 1px solid;
+}
+
+.left2 {
+    
+
+    width: 200px;
+    padding: 0px;
+    background: #FFF;
+    border: #999 1px solid;
+    text-align: center;
+}
+.right2 {
+ 
+    width: 120px;
+    padding: 0px;
+    background: #FFF;
+    border: #999 1px solid;
+    text-align: center;
+}
+.center2 {
+    flex-grow: 1;
+    margin: 0 40px 0 40px;
+    background: #FFF;
+    border: #999 1px solid;
+}
+br{
+    clear: both;
+}
+
