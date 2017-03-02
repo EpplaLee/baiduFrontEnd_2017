@@ -1,0 +1,43 @@
+
+
+.container {
+    background-color: #eee;
+    border: #999 1px solid;
+    overflow: hidden;
+    margin: auto;
+    min-width: 600px;
+}
+
+
+.left {
+    float: left;
+    width: 200px;
+    background: #FFF;
+    border: #999 1px solid;
+    padding: 20px;
+}
+.left p {
+    float: right;
+}
+
+.center {
+    margin-left: 260px;
+    margin-right: 180px;
+    background: #FFF;
+    border: #999 1px solid;
+    padding: 20px;
+}
+.right {
+    float: right;
+    width: 120px;
+    background: #FFF;
+    border: #999 1px solid;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+img {
+    height: 80px;
+    width: 80px;
+}
