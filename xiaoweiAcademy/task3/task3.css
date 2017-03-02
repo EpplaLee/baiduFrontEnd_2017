@@ -1,4 +1,12 @@
+* {
+    padding: 20px;
+    margin: 0;
+}
 
+body {
+    font-family: "微软雅黑";
+    font-size: 15px;
+}
 
 .container {
     background-color: #eee;
@@ -14,18 +22,16 @@
     width: 200px;
     background: #FFF;
     border: #999 1px solid;
-    padding: 20px;
-}
-.left p {
-    float: right;
+    padding: 0px;
+    text-align: center;
 }
 
+
 .center {
-    margin-left: 260px;
-    margin-right: 180px;
+    margin-left: 240px;
+    margin-right: 160px;
     background: #FFF;
     border: #999 1px solid;
-    padding: 20px;
 }
 .right {
     float: right;
@@ -33,7 +39,7 @@
     background: #FFF;
     border: #999 1px solid;
     text-align: center;
-    padding: 20px;
+    padding: 0;
     
 }
 
