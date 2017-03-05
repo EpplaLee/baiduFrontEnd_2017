@@ -1,0 +1,46 @@
+body {
+    background: #5C5C5C;
+}
+.main {
+    position: relative;
+    width: 980px;
+    height: 1386px;
+    margin: 0 auto;
+    background: white;
+}
+
+.head {
+    position: absolute;
+    top: 0;
+    left: 44px;
+    width: 892px;
+    height: 61px;
+    border-bottom: solid 2px #938e8c;
+}
+#box1{
+    width: 110px;
+    height: 61px;
+    position: relative;
+    background: #D45D5B;
+}
+#box2 {
+    position: relative;
+    right: 0;
+}
+
+#head-left {
+    position: absolute;
+    left:0;
+    bottom: 0;
+    margin: 0; 
+    color: white;
+    font: 12px SimHei; 
+}
+#head-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    font: 12px SimHei; 
+    color: #D45D5c;
+}
