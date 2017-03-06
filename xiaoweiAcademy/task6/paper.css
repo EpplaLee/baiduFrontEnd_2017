@@ -44,3 +44,37 @@ body {
     font: 12px SimHei; 
     color: #D45D5c;
 }
+
+#row1 {
+    width: 892px;
+    position: absolute;
+    top: 91px;
+    left: 44px;
+}
+#row1-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.title1{
+    margin: 0;
+    font: 24px Microsoft YaHei;
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-variant: small-caps; 
+}
+.subtitle1 {
+    margin: 0;
+    font: 12px "楷体";
+}
+#box3 {
+    position: relative;
+    bottom: 0;
+}
+#bottom1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 55px;
+}
+
