@@ -41,6 +41,8 @@ body {
 }
 
 #flexbox-x2-y2 {
+    border-top: solid 2px #cc8091;
+    width: 220px;
     height: 301px;
     display: flex;
     flex-direction: column;
@@ -55,7 +57,85 @@ body {
     bottom: 0;
     left: 78px; 
 }
+#box-y3 {
+    width: 641px;
+    position: absolute;
+    top: 420px;
+    left: 44px;
+    display: flex;
+}
 
+#box-x1-y3 {
+    width: 40%;
+    margin-right: 16px;
+}
+#box-x2-y3 {
+    width: 30%;
+    margin-right: 16px;
+}
+#box-x3-y3 {
+    width: 30%;
+}
+#box-y4 {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    left: 44px;
+    top: 650px;
+}
+#box-x1-y4 {
+    width: 415px;
+}
+#box-x2-y4 {
+    width: 458px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+#box-x1-y4-D {
+    border-top: solid 2px #11456b;
+}
+#box-x1-y4-D > img {
+    float: right;
+}
+#box-x2-y4-D {
+    margin-top: 25px;
+    background: #EDEDD6;
+    width: 459px;
+}
+#box-x2-y4-D > ul {
+    padding-top: 40px;
+    line-height: 40px;
+}
+#box-x2-y4-D-D {
+    display: flex;
+    justify-content: space-between;
+}
+#box-x2-y4-D-D-L {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 260px;
+    height: 160px;
+    background: #D45D5B;
+}
+#box-x2-y4-D-D-R {
+    text-align: left;
+    width: 180px;
+}
+#footer {
+    height: 50px;
+    width:892px;
+    position: absolute;
+    border-top: solid 2px #938e8c;
+    bottom: 0;
+    left: 44px;
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-start;
+}
+#footer > p {
+    margin-top: 0;
+}
 
 
 /*------------------------字体部分----------------------------------*/
@@ -85,6 +165,8 @@ body {
     font-variant: small-caps; 
 }
 .font-x2-y2-2 {
+    letter-spacing: -0.5px;
+    word-spacing: -4px;
     margin: 0;
     font: 12px "楷体";
 }
@@ -104,4 +186,87 @@ body {
     margin: 0;
     font: 12px Microsoft YaHei;
     color: #cc8091;
+}
+#font-y3-1 {
+    text-decoration: underline;
+    color: #418c59;
+    font: 16px Microsoft YaHei;
+}
+#font-y3-2 {
+    text-decoration: underline;
+    color: #d2994f;
+    font: 16px Microsoft YaHei;
+}
+#font-y3-3 {
+    text-decoration: underline;
+    color: #cc7680;
+    font: 16px Microsoft YaHei;
+}
+.font-y3-4 {
+    font: 12px "宋体";
+}
+
+#font-x1-y4-1{
+    display: inline;
+    font: 72px "黑体";
+    font-weight: bold;
+    font-style: oblique;
+    color: #f5e327;
+}
+#font-x1-y4-2 {
+    display: inline;
+    margin: 0;
+    font: 42px "黑体";
+    font-weight: bold;
+    color: #11456b;
+}
+#font-x1-y4-3 {
+    margin: 0;
+    font: 33px "黑体";
+    font-weight: bold;
+    color: #11456b;
+}
+
+#font-x1-y4-4::first-letter {
+    font: 70px Microsoft YaHei;
+    color: #f5e327;
+}
+
+#font-x2-y4-D-D-L-1 {
+    margin: 0;
+    border-right: solid 2px #FFFFFF;
+    font: 110px Microsoft YaHei;
+    color: #FFFFFF;
+}
+.font-x2-y4-D-D-L-1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 5px;
+    font: 21px "黑体";
+    color: #FFFFFF;
+    font-style: oblique;
+}
+.font-x2-y4-D-D-L-2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    font: 12px "黑体";
+    color: #FFFFFF;
+}
+.font-x2-y4-D-D-R-1 {
+    display: inline;
+    margin: 0;
+    font: 72px "黑体";
+    line-height: 60px;
+    color: #d45d5c;
+}
+#font-x2-y4-D-D-R-2 {
+    display: inline;
+    font: 14px "黑体";
+    color: #5a5b5b;
+}
+
+#footer > p {
+    font: 12px "黑体";
+    color: #d45d5c;
 }
